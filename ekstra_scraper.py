@@ -8,8 +8,6 @@ import io
 import os
 import datetime
 
-### Set the clear() function
-
 ### Set default season as current season
 def is_before_july():
     """Check if new data is available."""
@@ -23,11 +21,6 @@ if is_before_july():
 cur_season = str(cur_season)[-2:]
 cur_season = f"20{cur_season}-20{int(cur_season) + 1}"
 season = cur_season
-
-# ### Import stats from url into a soup ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###
-# request_url = str(f"https://fbref.com/en/comps/36/{season}/{season}-Ekstraklasa-Stats")
-# table_data = requests.get(request_url)
-# soup = BeautifulSoup(table_data.text, 'html.parser')
 
 ### Functions ###
 def create_table(ssn=season):
